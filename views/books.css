@@ -1,8 +1,20 @@
+.card-header {
+  background-color: #929292;
+}
 .titre {
   font-family: monospace;
-  color: #39E7E7;
+  color: #0033C6;
 }
 .card-body {
   font-style: italic;
   font-family: serif;
+  background-color: #000001;
+}
+.image {
+  background-color: #000001;
+  text-align: center;
+  padding-top: 2rem;
+}
+.auteur {
+  color: #FFFFFF
 }
