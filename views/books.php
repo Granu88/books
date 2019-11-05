@@ -60,7 +60,7 @@
               </div>
             </div>
               <div class="image">
-                <img src=<?php echo $book ['image']; ?> class="card-img-top" alt="photo" style="width:10rem;height: 18rem;">
+                <img src=<?php echo $book ['image'] ? $book['image'] : "public/images/books/couverture.jpg"; ?> class="card-img-top" alt="photo" style="width:10rem;height: 18rem;">
               </div>
             <div class="card-body">
               <div class="auteur">
