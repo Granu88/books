@@ -9,7 +9,7 @@
     justify-content: center;
     height: 100px;
     overflow: hidden;
-    background-color: #929292;
+    background-color: primary;
   }
   .titre {
     font-family: monospace;
@@ -64,7 +64,7 @@
               </div>
             <div class="card-body">
               <div class="auteur">
-                <h6> <?php echo $book ['author']  ?></h6>
+                <h6> <?php echo $book['author'] ? $book['author'] : "Auteur inconu" ?></h6>
               </div>
             </div>
             <div class="card-footer bg-transparent border-info">

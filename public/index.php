@@ -11,14 +11,10 @@
     </head>
 
     <body>
-      <nav class="navbar navbar-dark navbar-inverse">
-        <form class="navbar-form navbar-right" role="search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" />
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-primary"></button>
-            </span>
-          </div>
+      <nav class="navbar navbar-expand-sm bg-info navbar-info">
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
         </form>
       </nav>
       <?php echo $content ?>
