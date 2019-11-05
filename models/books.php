@@ -1,8 +1,23 @@
 <?php
 require_once('utils/db.php');
 
+
+function countBooks()
+{
+  $db = dbConnect();
+  $stmt = $db->prepare('SELECT COUNT(*) FROM books');
+  $stmt->execute();
+  return $stmt->fetchColumn();
+}
+
 function getBooks()
 {
+  $limit =12;
+  $page = isset($_get['page']) ? (int) $_GET['page'] : 1;
+  $count = countBooks();
+  $offset = ($page - 1) * $limit;
+
+
   $db = dbConnect();
   $stmt = $db->prepare('SELECT
     books.*,
@@ -10,7 +25,11 @@ function getBooks()
     FROM books
     LEFT JOIN authors
     ON books.author_id = authors.id
+    LIMIT :offset, :limit
+
   ');
+    $stmt->bindParam(':offset',$offset);
+    $stmt->bindParam(':limit',$limit);
 
   $stmt->execute();
   return $stmt->fetchAll(PDO::FETCH_ASSOC);
