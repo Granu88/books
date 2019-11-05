@@ -35,12 +35,6 @@
 
 </style>
 
-<div class="container-fluid table-dark">
-  <div class="container">
-    <nav class="navbar navbar-fixed-top">
-    </nav>
-  </div>
-</div>
 
 <div class="container-fluid table-primary">
   <div class="container">
@@ -66,7 +60,7 @@
               </div>
             </div>
               <div class="image">
-                <img src=<?php echo $book ['imageLink']; ?> class="card-img-top" alt="photo" style="width:10rem;height: 18rem;">
+                <img src=<?php echo $book ['image']; ?> class="card-img-top" alt="photo" style="width:10rem;height: 18rem;">
               </div>
             <div class="card-body">
               <div class="auteur">

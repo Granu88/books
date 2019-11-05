@@ -11,7 +11,16 @@
     </head>
 
     <body>
-
+      <nav class="navbar navbar-dark navbar-inverse">
+        <form class="navbar-form navbar-right" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-primary"></button>
+            </span>
+          </div>
+        </form>
+      </nav>
       <?php echo $content ?>
 
     </body>

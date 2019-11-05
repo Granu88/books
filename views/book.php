@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-md-3 col-sm-6">
         <div class="image">
-          <img src=<?php echo $book ['imageLink']; ?> class="card-img-top" alt="photo" style="width:14rem;height: 18rem;">
+          <img src=<?php echo $book ['image']; ?> class="card-img-top" alt="photo" style="width:14rem;height: 18rem;">
         </div>
       </div>
       <div class="col-md-7">
