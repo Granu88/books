@@ -9,7 +9,7 @@
 <div class="container-fluid table-primary">
   <div class="container table-dark">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6">
         <div class="image">
           <img src=<?php echo $book ['imageLink']; ?> class="card-img-top" alt="photo" style="width:14rem;height: 18rem;">
         </div>

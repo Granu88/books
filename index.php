@@ -1,4 +1,7 @@
 <?php
+
+
+
 $action = (string) $_GET['action'];
 
 switch ($action) {

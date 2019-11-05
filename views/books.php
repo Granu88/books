@@ -75,8 +75,7 @@
             </div>
             <div class="card-footer bg-transparent border-info">
               <div class="description">
-                <a href="?action=book&id=<?php echo $book['id'];?>">
-                <button type="button" class="btn btn-info">Description</button>
+                <a role="button" class="btn btn-info btn-block" href="?action=book&id=<?php echo $book['id'];?>">Description</a>
               </div>
               <br>
               <div class="panier">
