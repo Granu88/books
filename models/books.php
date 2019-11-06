@@ -12,7 +12,7 @@ function countBooks()
 
 function getBooks()
 {
-  $limit =12;
+  $limit =20;
   $page = isset($_get['page']) ? (int) $_GET['page'] : 1;
   $count = countBooks();
   $offset = ($page - 1) * $limit;
@@ -28,8 +28,8 @@ function getBooks()
     LIMIT :offset, :limit
 
   ');
-    $stmt->bindParam(':offset',$offset);
-    $stmt->bindParam(':limit',$limit);
+    $stmt->bindParam(':offset',$offset, PDO::PARAM_INT);
+    $stmt->bindParam(':limit',$limit, PDO::PARAM_INT);
 
   $stmt->execute();
   return $stmt->fetchAll(PDO::FETCH_ASSOC);

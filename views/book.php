@@ -2,19 +2,22 @@
 <?php ob_start(); ?>
 
 <style>
-  .panier {
-    margin-top:16em;
+  @media screen and (min-width: 992px) {
+    .mybtn {
+
+      display: inline-block;
+    }
   }
 </style>
 <div class="container-fluid table-primary">
   <div class="container table-dark">
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
+    <div class="row ">
+      <div class="col mt-2">
         <div class="image">
           <img src=<?php echo $book ['image']; ?> class="card-img-top" alt="photo" style="width:14rem;height: 18rem;">
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-auto mt-2">
         <table class="table table-striped table-active">
             <tbody>
                 <tr>
@@ -44,9 +47,10 @@
             </tbody>
         </table>
       </div>
-      <div class="col-md-2">
-        <div class="panier">
-          <button type="button" class="btn btn-primary">Ajouter au panier</button>
+      <div class="col mt-2">
+        <div class="mybtn">
+          <button type="button" class="btn btn-secondary btn-lg btn-block">wiki</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Ajouter au panier</button>
         </div>
       </div>
     </div>
