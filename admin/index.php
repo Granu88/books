@@ -3,13 +3,13 @@
 
   $db = dbConnect(); //je me connecte à la BDD
 
-  session_start();
+  session_start();// demarage session php
 
   if (isset($_SESSION['id'])) {
     session_destroy(); //si il a une session en cours on la déconnecte
   }
 
-  if (isset($_POST['login'])){
+  if (isset($_POST['login'])){ //on vérifie si on a posté un formulaire
     $login = (string) $_POST['login'];
     $password = (string) $_POST['pwd'];
 
@@ -21,11 +21,11 @@
     $stmt->execute();//j'éxecute ma requête
     $user = $stmt->fetch();
 
-    if ($user && password_verify($password, $user['password'])) {
+    if ($user && password_verify($password, $user['password'])) { //on vérifie l'email e le pwd
         $_SESSION['id'] = $user['id'];
         $_SESSION['name'] = $user['name'];
         $_SESSION['email'] = $user['email'];
-        header('Location: ./profile.php'); //redirection après login
+        header('Location: ./profile.php'); //redirection après login vers notre page de profile
     }
   }
 }

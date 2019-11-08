@@ -1,4 +1,0 @@
-AuthName "Admin"
-AuthType Basic
-AuthUserFile "/home/alajji/Documents/project/php/books/admin/.htpasswd"
-Require valid-user
